@@ -10,7 +10,7 @@ import android.view.MenuItem;
 import com.radicalninja.fontglyph.Glyph;
 
 
-public class MainActivity extends ActionBarActivity implements IconListFragment.GlyphListener {
+public class MainActivity extends ActionBarActivity implements GlyphListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,14 @@ public class MainActivity extends ActionBarActivity implements IconListFragment.
         }
     }
 
+    @Override
+    public void goBack() {
+        if (getFragmentManager().getBackStackEntryCount() > 0) {
+            getFragmentManager().popBackStack();
+        } else {
+            finish();
+        }
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -59,5 +67,10 @@ public class MainActivity extends ActionBarActivity implements IconListFragment.
         transaction.replace(R.id.container, fragment);
         transaction.addToBackStack(null);
         transaction.commit();
+    }
+
+    @Override
+    public void onBackPressed() {
+        goBack();
     }
 }

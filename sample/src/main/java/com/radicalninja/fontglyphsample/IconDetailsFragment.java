@@ -1,9 +1,11 @@
 package com.radicalninja.fontglyphsample;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
@@ -19,11 +21,14 @@ public class IconDetailsFragment extends Fragment {
 
     // TODO: Implement fragment backstack behavior
 
+    private static final String TAG = "IconDetailsFragment";
+
     public static final String ARG_GLYPH = "glyph";
 
     private FontGlyph mGlyph;
     private TextView mScaleSize;
     private SeekBar mScaleBar;
+    private GlyphListener mListener;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -33,6 +38,16 @@ public class IconDetailsFragment extends Fragment {
         mScaleSize = (TextView) rootView.findViewById(R.id.scale_size);
         mScaleBar = (SeekBar) rootView.findViewById(R.id.scale_bar);
         return rootView;
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+        try {
+            mListener = (GlyphListener) activity;
+        } catch (ClassCastException e) {
+            throw new RuntimeException("Parent activity must implement GlyphListener.", e);
+        }
     }
 
     @Override
@@ -59,9 +74,17 @@ public class IconDetailsFragment extends Fragment {
         ab.setDisplayHomeAsUpEnabled(true);
     }
 
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        this.setHasOptionsMenu(true);
+    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        if (item.getItemId() == android.R.id.home) {
+            mListener.goBack();
+        }
         return super.onOptionsItemSelected(item);
     }
 
