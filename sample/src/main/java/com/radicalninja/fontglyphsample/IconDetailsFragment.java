@@ -19,8 +19,6 @@ import com.radicalninja.fontglyph.Glyph;
 
 public class IconDetailsFragment extends Fragment {
 
-    // TODO: Implement fragment backstack behavior
-
     private static final String TAG = "IconDetailsFragment";
 
     public static final String ARG_GLYPH = "glyph";

@@ -4,5 +4,5 @@ import com.radicalninja.fontglyph.Glyph;
 
 public interface GlyphListener {
     public void goBack();
-    public void loadIconDetails(Glyph glyph);
+    public void loadIconDetails(Glyph glyph, int themeResId);
 }

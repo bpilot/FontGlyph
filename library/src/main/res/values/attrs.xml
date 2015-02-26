@@ -22,6 +22,10 @@
             <enum name="file_code_o" value="15" />
         </attr>
 
+    </declare-styleable>
+
+    <declare-styleable name="FontGlyphProperties">
+
         <attr name="glyphSize" format="dimension" />
 
         <attr name="glyphColor" format="color" />

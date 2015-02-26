@@ -6,21 +6,21 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ListView;
 
-import com.radicalninja.fontglyph.Glyph;
 
-public class IconListFragment extends Fragment implements AdapterView.OnItemClickListener {
+public class IconListFragment extends Fragment implements IconListRecyclerAdapter.OnListItemClickedListener {
 
     private static final String TAG = "IconListFragment";
 
-    private ListView mListView;
     private GlyphListener mListener;
+    private RecyclerView mRecyclerView;
+    private IconListRecyclerAdapter mAdapter;
 
     public IconListFragment() { }
 
@@ -28,7 +28,7 @@ public class IconListFragment extends Fragment implements AdapterView.OnItemClic
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_icon_list, container, false);
-        mListView = (ListView) rootView.findViewById(R.id.listview);
+        mRecyclerView = (RecyclerView) rootView.findViewById(R.id.recyclerview);
         ActionBar ab =  ((ActionBarActivity) getActivity()).getSupportActionBar();
         ab.setTitle(R.string.app_name);
         ab.setDisplayHomeAsUpEnabled(false);
@@ -39,8 +39,10 @@ public class IconListFragment extends Fragment implements AdapterView.OnItemClic
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        mListView.setAdapter(new IconListAdapter(getActivity()));
-        mListView.setOnItemClickListener(this);
+        mRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(), 2));
+
+        mAdapter = new IconListRecyclerAdapter(this);
+        mRecyclerView.setAdapter(mAdapter);
     }
 
     @Override
@@ -54,8 +56,8 @@ public class IconListFragment extends Fragment implements AdapterView.OnItemClic
     }
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-        mListener.loadIconDetails((Glyph) mListView.getAdapter().getItem(position));
+    public void onItemClick(View view, int position) {
+        mListener.loadIconDetails(mAdapter.getItem(position), PaletteTheme.getTheme(position));
     }
 
     @Override

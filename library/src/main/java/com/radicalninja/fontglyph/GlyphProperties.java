@@ -31,12 +31,15 @@ public class GlyphProperties {
             mGlyph = defGlyph;
         }
 
-        float size = a.getDimension(R.styleable.FontGlyph_glyphSize, 0);
+        a.recycle();
+        a = context.obtainStyledAttributes(attrs, R.styleable.FontGlyphProperties);
+
+        float size = a.getDimension(R.styleable.FontGlyphProperties_glyphSize, 0);
         if (size > 0) {
             mSize = size;
         }
 
-        mColorInt = a.getColor(R.styleable.FontGlyph_glyphColor, INVALID);
+        mColorInt = a.getColor(R.styleable.FontGlyphProperties_glyphColor, INVALID);
 
         a.recycle();
     }

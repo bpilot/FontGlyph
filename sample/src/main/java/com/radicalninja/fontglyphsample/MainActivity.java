@@ -55,8 +55,8 @@ public class MainActivity extends ActionBarActivity implements GlyphListener {
     }
 
     @Override
-    public void loadIconDetails(Glyph glyph) {
-        // TODO CREATE FRAGMENT HERE
+    public void loadIconDetails(Glyph glyph, int themeResId) {
+        // TODO: Convert this to a new Activity and use setTheme(int) before launching.
         Bundle bundle = new Bundle();
         bundle.putInt(IconDetailsFragment.ARG_GLYPH, glyph.value);
         IconDetailsFragment fragment = new IconDetailsFragment();
