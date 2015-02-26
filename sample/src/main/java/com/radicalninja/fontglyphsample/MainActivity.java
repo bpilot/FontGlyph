@@ -1,7 +1,6 @@
 package com.radicalninja.fontglyphsample;
 
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -9,11 +8,15 @@ import android.view.MenuItem;
 
 import com.radicalninja.fontglyph.Glyph;
 
+import java.util.Random;
+
 
 public class MainActivity extends ActionBarActivity implements GlyphListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setTheme(PaletteTheme.THEMES[new Random().nextInt(PaletteTheme.THEMES.length)]);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
@@ -56,17 +59,10 @@ public class MainActivity extends ActionBarActivity implements GlyphListener {
 
     @Override
     public void loadIconDetails(Glyph glyph, int themeResId) {
-        // TODO: Convert this to a new Activity and use setTheme(int) before launching.
-        Bundle bundle = new Bundle();
-        bundle.putInt(IconDetailsFragment.ARG_GLYPH, glyph.value);
-        IconDetailsFragment fragment = new IconDetailsFragment();
-        fragment.setArguments(bundle);
-
-        FragmentManager manager = getFragmentManager();
-        FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.container, fragment);
-        transaction.addToBackStack(null);
-        transaction.commit();
+        Intent intent = new Intent(this, IconDetailsActivity.class);
+        intent.putExtra(IconDetailsActivity.ARG_GLYPH, glyph.value);
+        intent.putExtra(IconDetailsActivity.ARG_THEME, themeResId);
+        startActivity(intent);
     }
 
     @Override

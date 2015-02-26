@@ -9,7 +9,7 @@ import java.util.Map;
 
 public class PaletteTheme {
 
-    private static final int[] THEMES = {
+    public static final int[] THEMES = {
             R.style.Palette_Red, R.style.Palette_Red_Secondary,
             R.style.Palette_Pink, R.style.Palette_Pink_Secondary,
             R.style.Palette_Purple, R.style.Palette_Purple_Secondary,
