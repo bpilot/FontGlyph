@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Red -->
+    <color name="redPrimaryColor">#F44336</color>
+    <color name="redPrimaryDark">#D32F2F</color>
+    <color name="redPrimaryAccent">#FFCDD2</color>
+
+    <color name="redSecondaryColor">#FF5252</color>
+    <color name="redSecondaryDark">#FF1744</color>
+    <color name="redSecondaryAccent">#FF8A80</color>
+
+    <!-- Pink -->
+    <color name="pinkPrimaryColor">#E91E63</color>
+    <color name="pinkPrimaryDark">#C2185B</color>
+    <color name="pinkPrimaryAccent">#F8BBD0</color>
+
+    <color name="pinkSecondaryColor">#FF4081</color>
+    <color name="pinkSecondaryDark">#F50057</color>
+    <color name="pinkSecondaryAccent">#FF80AB</color>
+
+    <!-- Purple -->
+    <color name="purplePrimaryColor">#9C27B0</color>
+    <color name="purplePrimaryDark">#7B1FA2</color>
+    <color name="purplePrimaryAccent">#E1BEE7</color>
+
+    <color name="purpleSecondaryColor">#E040FB</color>
+    <color name="purpleSecondaryDark">#D500F9</color>
+    <color name="purpleSecondaryAccent">#EA80FC</color>
+
+    <!-- Deep Purple -->
+    <color name="deepPurplePrimaryColor">#673AB7</color>
+    <color name="deepPurplePrimaryDark">#512DA8</color>
+    <color name="deepPurplePrimaryAccent">#D1C4E9</color>
+
+    <color name="deepPurpleSecondaryColor">#7C4DFF</color>
+    <color name="deepPurpleSecondaryDark">#651FFF</color>
+    <color name="deepPurpleSecondaryAccent">#B388FF</color>
+
+    <!-- Indigo -->
+    <color name="indigoPrimaryColor">#3F51B5</color>
+    <color name="indigoPrimaryDark">#303F9F</color>
+    <color name="indigoPrimaryAccent">#C5CAE9</color>
+
+    <color name="indigoSecondaryColor">#536DFE</color>
+    <color name="indigoSecondaryDark">#3D5AFE</color>
+    <color name="indigoSecondaryAccent">#8C9EFF</color>
+
+    <!-- Blue -->
+    <color name="bluePrimaryColor">#2196F3</color>
+    <color name="bluePrimaryDark">#1976D2</color>
+    <color name="bluePrimaryAccent">#BBDEFB</color>
+
+    <color name="blueSecondaryColor">#448AFF</color>
+    <color name="blueSecondaryDark">#2979FF</color>
+    <color name="blueSecondaryAccent">#82B1FF</color>
+
+    <!-- Light Blue -->
+    <color name="lightBluePrimaryColor">#03A9F4</color>
+    <color name="lightBluePrimaryDark">#0288D1</color>
+    <color name="lightBluePrimaryAccent">#B3E5FC</color>
+
+    <color name="lightBlueSecondaryColor">#40C4FF</color>
+    <color name="lightBlueSecondaryDark">#00B0FF</color>
+    <color name="lightBlueSecondaryAccent">#80D8FF</color>
+
+    <!-- Cyan -->
+    <color name="cyanPrimaryColor">#00BCD3</color>
+    <color name="cyanPrimaryDark">#0097A7</color>
+    <color name="cyanPrimaryAccent">#B2EBF2</color>
+
+    <color name="cyanSecondaryColor">#18FFFF</color>
+    <color name="cyanSecondaryDark">#00E5FF</color>
+    <color name="cyanSecondaryAccent">#84FFFF</color>
+
+    <!-- Teal -->
+    <color name="tealPrimaryColor">#009688</color>
+    <color name="tealPrimaryDark">#00796B</color>
+    <color name="tealPrimaryAccent">#B2DFDB</color>
+
+    <color name="tealSecondaryColor">#64FFDA</color>
+    <color name="tealSecondaryDark">#1DE9B6</color>
+    <color name="tealSecondaryAccent">#A7FFEB</color>
+
+    <!-- Green -->
+    <color name="greenPrimaryColor">#4CAF50</color>
+    <color name="greenPrimaryDark">#388E3C</color>
+    <color name="greenPrimaryAccent">#C8E6C9</color>
+
+    <color name="greenSecondaryColor">#69F0AE</color>
+    <color name="greenSecondaryDark">#00E676</color>
+    <color name="greenSecondaryAccent">#B9F6CA</color>
+
+    <!-- Light Green -->
+    <color name="lightGreenPrimaryColor">#8BC34A</color>
+    <color name="lightGreenPrimaryDark">#689F38</color>
+    <color name="lightGreenPrimaryAccent">#DCEDC8</color>
+
+    <color name="lightGreenSecondaryColor">#B2FF59</color>
+    <color name="lightGreenSecondaryDark">#76FF03</color>
+    <color name="lightGreenSecondaryAccent">#CCFF90</color>
+
+    <!-- Lime -->
+    <color name="limePrimaryColor">#CDDC39</color>
+    <color name="limePrimaryDark">#AFB42B</color>
+    <color name="limePrimaryAccent">#F0F4C3</color>
+
+    <color name="limeSecondaryColor">#EEFF41</color>
+    <color name="limeSecondaryDark">#C6FF00</color>
+    <color name="limeSecondaryAccent">#F4FF81</color>
+
+    <!-- Yellow -->
+    <color name="yellowPrimaryColor">#FFEB3B</color>
+    <color name="yellowPrimaryDark">#FBC02D</color>
+    <color name="yellowPrimaryAccent">#FFF9C4</color>
+
+    <color name="yellowSecondaryColor">#FFFF00</color>
+    <color name="yellowSecondaryDark">#FFEA00</color>
+    <color name="yellowSecondaryAccent">#FFFF8D</color>
+
+    <!-- Amber -->
+    <color name="amberPrimaryColor">#FFC107</color>
+    <color name="amberPrimaryDark">#FFA000</color>
+    <color name="amberPrimaryAccent">#FFECB3</color>
+
+    <color name="amberSecondaryColor">#FFD740</color>
+    <color name="amberSecondaryDark">#FFC400</color>
+    <color name="amberSecondaryAccent">#FFE57F</color>
+
+    <!-- Orange -->
+    <color name="orangePrimaryColor">#FF9800</color>
+    <color name="orangePrimaryDark">#F57C00</color>
+    <color name="orangePrimaryAccent">#FFE0B2</color>
+
+    <color name="orangeSecondaryColor">#FFAB40</color>
+    <color name="orangeSecondaryDark">#FF9100</color>
+    <color name="orangeSecondaryAccent">#FFD180</color>
+
+    <!-- Deep Orange -->
+    <color name="deepOrangePrimaryColor">#FF5722</color>
+    <color name="deepOrangePrimaryDark">#E64A19</color>
+    <color name="deepOrangePrimaryAccent">#FFCCBC</color>
+
+    <color name="deepOrangeSecondaryColor">#FF6E40</color>
+    <color name="deepOrangeSecondaryDark">#FF3D00</color>
+    <color name="deepOrangeSecondaryAccent">#FF9E80</color>
+
+    <!-- Brown -->
+    <color name="brownPrimaryColor">#795548</color>
+    <color name="brownPrimaryDark">#5D4037</color>
+    <color name="brownPrimaryAccent">#D7CCC8</color>
+
+    <!-- Grey -->
+    <color name="greyPrimaryColor">#9E9E9E</color>
+    <color name="greyPrimaryDark">#616161</color>
+    <color name="greyPrimaryAccent">#F5F5F5</color>
+
+    <!-- Blue Grey -->
+    <color name="blueGreyPrimaryColor">#607D8B</color>
+    <color name="blueGreyPrimaryDark">#455A64</color>
+    <color name="blueGreyPrimaryAccent">#CFD8DC</color>
+
+</resources>
