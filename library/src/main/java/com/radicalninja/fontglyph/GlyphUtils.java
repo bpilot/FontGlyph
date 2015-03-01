@@ -8,7 +8,6 @@ import android.util.Log;
 
 public class GlyphUtils {
 
-    private static final String FONT_ASSET_FILENAME = "fontawesome-file-glyphs.ttf";
     private static final String TAG = "FontIcon";
 
     public static final Glyph DEFAULT_ICON = Glyph.EXCLAMATION_TRIANGLE;
@@ -19,7 +18,7 @@ public class GlyphUtils {
 
         if (mTypeface == null) {
             try {
-                mTypeface = Typeface.createFromAsset(context.getAssets(), FONT_ASSET_FILENAME);
+                mTypeface = Typeface.createFromAsset(context.getAssets(), Glyph.FONT_ASSET_FILENAME);
             } catch (Exception e) {
                 Log.e(TAG, "Could not get typeface: " + e.getMessage());
                 mTypeface = Typeface.DEFAULT;

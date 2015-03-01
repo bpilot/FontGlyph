@@ -1,0 +1,20 @@
+package com.radicalninja.fontglyph;
+
+public enum Glyph {
+
+    %1$s;
+
+    public static final int _BASE = %2$d;
+    public static final String FONT_ASSET_FILENAME = "%3$s";
+
+    public final int value;
+
+    public static Glyph valueOf(int value) {
+        return Glyph.values()[value];
+    }
+
+    private Glyph(int value) {
+        this.value = value;
+    }
+
+}

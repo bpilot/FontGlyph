@@ -1,29 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <declare-styleable name="FontGlyph">
-
-        <attr name="glyph">
-            <enum name="file_o" value="0" />
-            <enum name="image" value="1" />
-            <enum name="exclamation_triangle" value="2" />
-            <enum name="folder" value="3" />
-            <enum name="folder_open" value="4" />
-            <enum name="arrow_circle_up" value="5" />
-            <enum name="file_text_o" value="6" />
-            <enum name="folder_o" value="7" />
-            <enum name="folder_open_o" value="8" />
-            <enum name="file" value="9" />
-            <enum name="file_text" value="10" />
-            <enum name="file_image_o" value="11" />
-            <enum name="file_archive_o" value="12" />
-            <enum name="file_audio_o" value="13" />
-            <enum name="file_movie_o" value="14" />
-            <enum name="file_code_o" value="15" />
-        </attr>
-
-    </declare-styleable>
-
     <declare-styleable name="FontGlyphProperties">
 
         <attr name="glyphSize" format="dimension" />
