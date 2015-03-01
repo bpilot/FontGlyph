@@ -35,11 +35,7 @@ public class PaletteTheme {
     private int colorPrimary, colorPrimaryDark, colorAccent;
 
     public static int getTheme(int index) {
-        if (index > THEMES.length) {
-            return THEMES[(index / THEMES.length) + (index % THEMES.length)];
-        } else {
-            return THEMES[index];
-        }
+        return THEMES[index - ((index / THEMES.length) * THEMES.length)];
     }
 
     public static PaletteTheme getPalette(Context context, int themeResId) {
