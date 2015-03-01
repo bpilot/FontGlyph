@@ -10,9 +10,15 @@ import android.widget.TextView;
 import com.radicalninja.fontglyph.FontGlyph;
 import com.radicalninja.fontglyph.Glyph;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 
 public class IconListRecyclerAdapter
-        extends RecyclerView.Adapter<IconListRecyclerAdapter.ViewHolder> {
+        extends RecyclerView.Adapter<IconListRecyclerAdapter.ViewHolder>
+        implements Comparator<Glyph> {
+
+    private static final String TAG = "IconListRecyclerAdapter";
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public FontGlyph glyph;
@@ -46,6 +52,7 @@ public class IconListRecyclerAdapter
 
     public IconListRecyclerAdapter(OnListItemClickedListener onListItemClickedListener) {
         mClickListener = onListItemClickedListener;
+        Arrays.sort(values, this);
     }
 
     @Override
@@ -78,5 +85,10 @@ public class IconListRecyclerAdapter
 
     public Glyph getItem(int position) {
         return values[position];
+    }
+
+    @Override
+    public int compare(Glyph g1, Glyph g2) {
+        return g1.toString().compareTo(g2.toString());
     }
 }
