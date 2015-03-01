@@ -9,6 +9,8 @@ import javax.lang.model.SourceVersion;
 
 public class FontMaker {
 
+    // Remember to Reset Codes on the icomoon.io/app before downloading to ensure reliable enumeration.
+
     // TODO: Add in dynamic arguments for font / config files [IcoMoonSelection.DEFAULT_CONFIG_FILENAME]
 
     public static final String FONT_DIR = "../font/";
@@ -50,13 +52,11 @@ public class FontMaker {
             String filename = selection.getFontFilename();
             int resetPoint = selection.getResetPoint();
 
-            int lessReset = 0;
             if (resetPoint == 0) {
-                lessReset = glyphs.get(0).code;
-                resetPoint = lessReset;
+                resetPoint = glyphs.get(0).code;
             }
             for (GlyphEntry glyph : glyphs) {
-                glyph.code -= lessReset;
+                glyph.code -= resetPoint;
                 glyph.name = glyph.name.replace("-","_");
                 if (SourceVersion.isKeyword(glyph.name)) {
                     glyph.name = "_".concat(glyph.name);
