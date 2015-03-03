@@ -5,6 +5,8 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.util.TypedValue;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
@@ -34,6 +36,7 @@ public class IconDetailsActivity extends ActionBarActivity {
         setContentView(R.layout.activity_icon_details);
         //mViewPager = (ViewPager) findViewById(R.id.viewpager);
         mGlyph = (FontGlyph) findViewById(R.id.glyph);
+        mGlyph.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         mScaleSize = (TextView) findViewById(R.id.scale_size);
         mScaleBar = (SeekBar) findViewById(R.id.scale_bar);
     }
@@ -59,8 +62,14 @@ public class IconDetailsActivity extends ActionBarActivity {
 
         mGlyph.setIcon(glyph);
         ActionBar ab =  getSupportActionBar();
-        ab.setTitle(StringUtils.beautifyString(glyph.name()));
         ab.setDisplayHomeAsUpEnabled(true);
+        ab.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
+        View abView = getLayoutInflater().inflate(R.layout.glyph_title_item, null, false);
+        TextView abTitle = (TextView) abView.findViewById(R.id.action_bar_title);
+        FontGlyph abGlyph = (FontGlyph) abView.findViewById(R.id.action_bar_glyph);
+        abTitle.setText(StringUtils.beautifyString(glyph.name()));
+        abGlyph.setIcon(glyph);
+        ab.setCustomView(abView);
     }
 
     @Override
