@@ -6,14 +6,17 @@ import android.support.v7.app.ActionBarActivity;
 import android.util.TypedValue;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.LinearLayout;
+import android.widget.AdapterView;
 import android.widget.SeekBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 
 import com.radicalninja.fontglyph.FontGlyph;
 import com.radicalninja.fontglyph.Glyph;
 
-public class IconDetailsActivity extends ActionBarActivity {
+import java.util.Arrays;
+
+public class IconDetailsActivity extends ActionBarActivity implements AdapterView.OnItemSelectedListener {
 
     private static final String TAG = "IconDetailsActivity";
 
@@ -24,6 +27,8 @@ public class IconDetailsActivity extends ActionBarActivity {
     private FontGlyph mGlyph;
     private TextView mScaleSize;
     private SeekBar mScaleBar;
+    private Spinner mSpinner;
+    private TitleSpinnerAdapter mSpinnerAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -39,6 +44,11 @@ public class IconDetailsActivity extends ActionBarActivity {
         mGlyph.setLayerType(View.LAYER_TYPE_SOFTWARE, null);
         mScaleSize = (TextView) findViewById(R.id.scale_size);
         mScaleBar = (SeekBar) findViewById(R.id.scale_bar);
+
+        mSpinner = new Spinner(this);
+        mSpinner.setOnItemSelectedListener(this);
+        mSpinnerAdapter = new TitleSpinnerAdapter(SampleApplication.getGlyphs());
+        mSpinner.setAdapter(mSpinnerAdapter);
     }
 
     @Override
@@ -62,14 +72,10 @@ public class IconDetailsActivity extends ActionBarActivity {
 
         mGlyph.setIcon(glyph);
         ActionBar ab =  getSupportActionBar();
-        ab.setDisplayHomeAsUpEnabled(true);
         ab.setDisplayOptions(ActionBar.DISPLAY_SHOW_CUSTOM);
-        View abView = getLayoutInflater().inflate(R.layout.glyph_title_item, null, false);
-        TextView abTitle = (TextView) abView.findViewById(R.id.action_bar_title);
-        FontGlyph abGlyph = (FontGlyph) abView.findViewById(R.id.action_bar_glyph);
-        abTitle.setText(StringUtils.beautifyString(glyph.name()));
-        abGlyph.setIcon(glyph);
-        ab.setCustomView(abView);
+        mSpinner.setSelection(Arrays.asList(SampleApplication.getGlyphs()).indexOf(glyph));
+        ab.setCustomView(mSpinner);
+        ab.setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -80,4 +86,11 @@ public class IconDetailsActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        mGlyph.setIcon(SampleApplication.getGlyphs()[position]);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) { }
 }
