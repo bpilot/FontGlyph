@@ -6,6 +6,9 @@ import android.text.Spannable;
 import android.text.SpannableString;
 import android.util.Log;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class GlyphUtils {
 
     private static final String TAG = "FontIcon";
@@ -36,6 +39,17 @@ public class GlyphUtils {
         GlyphSpan span = new GlyphSpan(getTypeface(context));
         string.setSpan(span, 0, string.length(), Spannable.SPAN_EXCLUSIVE_EXCLUSIVE);
         return string;
+    }
+
+    public static Glyph[] getAlphatizedGlyphs() {
+        Glyph[] glyphs = Glyph.values();
+        Arrays.sort(glyphs, new Comparator<Glyph>() {
+            @Override
+            public int compare(Glyph g1, Glyph g2) {
+                return g1.toString().compareTo(g2.toString());
+            }
+        });
+        return glyphs;
     }
 
 }

@@ -9,14 +9,10 @@ import android.widget.TextView;
 
 import com.radicalninja.fontglyph.FontGlyph;
 import com.radicalninja.fontglyph.Glyph;
-
-import java.util.Arrays;
-import java.util.Comparator;
-
+import com.radicalninja.fontglyph.GlyphUtils;
 
 public class IconListRecyclerAdapter
-        extends RecyclerView.Adapter<IconListRecyclerAdapter.ViewHolder>
-        implements Comparator<Glyph> {
+        extends RecyclerView.Adapter<IconListRecyclerAdapter.ViewHolder> {
 
     private static final String TAG = "IconListRecyclerAdapter";
 
@@ -46,13 +42,12 @@ public class IconListRecyclerAdapter
         public void onItemClick(View v, int position);
     }
 
-    private Glyph[] values = Glyph.values();
+    private Glyph[] values = GlyphUtils.getAlphatizedGlyphs();
 
     public OnListItemClickedListener mClickListener;
 
     public IconListRecyclerAdapter(OnListItemClickedListener onListItemClickedListener) {
         mClickListener = onListItemClickedListener;
-        Arrays.sort(values, this);
     }
 
     @Override
@@ -87,8 +82,4 @@ public class IconListRecyclerAdapter
         return values[position];
     }
 
-    @Override
-    public int compare(Glyph g1, Glyph g2) {
-        return g1.toString().compareTo(g2.toString());
-    }
 }
