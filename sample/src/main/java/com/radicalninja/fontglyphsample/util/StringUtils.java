@@ -1,4 +1,4 @@
-package com.radicalninja.fontglyphsample;
+package com.radicalninja.fontglyphsample.util;
 
 public class StringUtils {
 

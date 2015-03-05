@@ -1,8 +1,9 @@
-package com.radicalninja.fontglyphsample;
+package com.radicalninja.fontglyphsample.listener;
 
 import com.radicalninja.fontglyph.Glyph;
 
-public interface GlyphListener {
-    public void goBack();
+public interface AppNavListener {
+
     public void loadIconDetails(Glyph glyph, int themeResId);
+
 }

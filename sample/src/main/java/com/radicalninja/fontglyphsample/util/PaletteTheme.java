@@ -1,8 +1,10 @@
-package com.radicalninja.fontglyphsample;
+package com.radicalninja.fontglyphsample.util;
 
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Color;
+
+import com.radicalninja.fontglyphsample.R;
 
 import java.util.HashMap;
 import java.util.Map;

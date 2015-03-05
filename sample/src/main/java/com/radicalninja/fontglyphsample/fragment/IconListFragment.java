@@ -1,4 +1,4 @@
-package com.radicalninja.fontglyphsample;
+package com.radicalninja.fontglyphsample.fragment;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -13,12 +13,17 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.radicalninja.fontglyphsample.listener.AppNavListener;
+import com.radicalninja.fontglyphsample.adapter.IconListRecyclerAdapter;
+import com.radicalninja.fontglyphsample.util.PaletteTheme;
+import com.radicalninja.fontglyphsample.R;
+
 
 public class IconListFragment extends Fragment implements IconListRecyclerAdapter.OnListItemClickedListener {
 
     private static final String TAG = "IconListFragment";
 
-    private GlyphListener mListener;
+    private AppNavListener mListener;
     private RecyclerView mRecyclerView;
     private IconListRecyclerAdapter mAdapter;
 
@@ -49,7 +54,7 @@ public class IconListFragment extends Fragment implements IconListRecyclerAdapte
     public void onAttach(Activity activity) {
         super.onAttach(activity);
         try {
-            mListener = (GlyphListener) activity;
+            mListener = (AppNavListener) activity;
         } catch (ClassCastException e) {
             throw new RuntimeException("Parent activity must implement GlyphListener.", e);
         }

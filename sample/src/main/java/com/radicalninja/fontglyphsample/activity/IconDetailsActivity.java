@@ -1,4 +1,4 @@
-package com.radicalninja.fontglyphsample;
+package com.radicalninja.fontglyphsample.activity;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -13,6 +13,9 @@ import android.widget.TextView;
 
 import com.radicalninja.fontglyph.FontGlyph;
 import com.radicalninja.fontglyph.Glyph;
+import com.radicalninja.fontglyphsample.R;
+import com.radicalninja.fontglyphsample.SampleApplication;
+import com.radicalninja.fontglyphsample.adapter.TitleSpinnerAdapter;
 
 import java.util.Arrays;
 

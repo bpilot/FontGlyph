@@ -1,4 +1,4 @@
-package com.radicalninja.fontglyphsample;
+package com.radicalninja.fontglyphsample.adapter;
 
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
@@ -10,6 +10,9 @@ import android.widget.TextView;
 import com.radicalninja.fontglyph.FontGlyph;
 import com.radicalninja.fontglyph.Glyph;
 import com.radicalninja.fontglyph.GlyphUtils;
+import com.radicalninja.fontglyphsample.util.PaletteTheme;
+import com.radicalninja.fontglyphsample.R;
+import com.radicalninja.fontglyphsample.util.StringUtils;
 
 public class IconListRecyclerAdapter
         extends RecyclerView.Adapter<IconListRecyclerAdapter.ViewHolder> {

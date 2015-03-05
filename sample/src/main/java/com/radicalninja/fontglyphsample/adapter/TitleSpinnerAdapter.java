@@ -1,4 +1,4 @@
-package com.radicalninja.fontglyphsample;
+package com.radicalninja.fontglyphsample.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import com.radicalninja.fontglyph.FontGlyph;
 import com.radicalninja.fontglyph.Glyph;
+import com.radicalninja.fontglyphsample.R;
+import com.radicalninja.fontglyphsample.util.StringUtils;
 
 public class TitleSpinnerAdapter extends BaseAdapter implements SpinnerAdapter {
 

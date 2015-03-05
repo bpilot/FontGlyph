@@ -1,4 +1,4 @@
-package com.radicalninja.fontglyphsample;
+package com.radicalninja.fontglyphsample.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,11 +7,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.radicalninja.fontglyph.Glyph;
+import com.radicalninja.fontglyphsample.listener.AppNavListener;
+import com.radicalninja.fontglyphsample.fragment.IconListFragment;
+import com.radicalninja.fontglyphsample.util.PaletteTheme;
+import com.radicalninja.fontglyphsample.R;
 
 import java.util.Random;
 
 
-public class MainActivity extends ActionBarActivity implements GlyphListener {
+public class MainActivity extends ActionBarActivity implements AppNavListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
