@@ -1,0 +1,217 @@
+{
+    "colors": {
+        "red": {
+            "primary": {
+                "color":"F44366",
+                "dark":"D32F2F",
+                "accent":"FFCDD2"
+            },
+            "secondary": {
+                "color":"FF5252",
+                "dark":"FF1744",
+                "accent":"FF8A80"
+            }
+        },
+        "pink": {
+            "primary": {
+                "color":"E91E63",
+                "dark":"C2185B",
+                "accent":"F8BBD0"
+            },
+            "secondary": {
+                "color":"FF4081",
+                "dark":"F50057",
+                "accent":"FF80AB"
+            }
+        },
+        "purple": {
+            "primary": {
+                "color":"9C27B0",
+                "dark":"7B1FA2",
+                "accent":"E1BEE7"
+            },
+            "secondary": {
+                "color":"E040FB",
+                "dark":"D500F9",
+                "accent":"EA80FC"
+            }
+        },
+        "deepPurple": {
+            "primary": {
+                "color":"673AB7",
+                "dark":"512DA8",
+                "accent":"D1C4E9"
+            },
+            "secondary": {
+                "color":"7C4DFF",
+                "dark":"651FFF",
+                "accent":"B388FF"
+            }
+        },
+        "indigo": {
+            "primary": {
+                "color":"3F51B5",
+                "dark":"303F9F",
+                "accent":"C5CAE9"
+            },
+            "secondary": {
+                "color":"536DFE",
+                "dark":"3D5AFE",
+                "accent":"8C9EFF"
+            }
+        },
+        "blue": {
+            "primary": {
+                "color":"2196F3",
+                "dark":"1976D2",
+                "accent":"BBDEFB"
+            },
+            "secondary": {
+                "color":"448AFF",
+                "dark":"2979FF",
+                "accent":"82B1FF"
+            }
+        },
+        "lightBlue": {
+            "primary": {
+                "color":"03A9F4",
+                "dark":"0288D1",
+                "accent":"B3E5FC"
+            },
+            "secondary": {
+                "color":"40C4FF",
+                "dark":"00B0FF",
+                "accent":"80D8FF"
+            }
+        },
+        "cyan": {
+            "primary": {
+                "color":"00BCD3",
+                "dark":"0097A7",
+                "accent":"B2EBF2"
+            },
+            "secondary": {
+                "color":"18FFFF",
+                "dark":"00E5FF",
+                "accent":"84FFFF"
+            }
+        },
+        "teal": {
+            "primary": {
+                "color":"009688",
+                "dark":"00796B",
+                "accent":"B2DFDB"
+            },
+            "secondary": {
+                "color":"64FFDA",
+                "dark":"1DE9B6",
+                "accent":"A7FFEB"
+            }
+        },
+        "green": {
+            "primary": {
+                "color":"4CAF50",
+                "dark":"388E3C",
+                "accent":"C8E6C9"
+            },
+            "secondary": {
+                "color":"69F0AE",
+                "dark":"00E676",
+                "accent":"B9F6CA"
+            }
+        },
+        "lightGreen": {
+            "primary": {
+                "color":"8BC34A",
+                "dark":"689F38",
+                "accent":"DCEDC8"
+            },
+            "secondary": {
+                "color":"B2FF59",
+                "dark":"76FF03",
+                "accent":"CCFF90"
+            }
+        },
+        "lime": {
+            "primary": {
+                "color":"CDDC39",
+                "dark":"AFB42B",
+                "accent":"F0F4C3"
+            },
+            "secondary": {
+                "color":"EEFF41",
+                "dark":"C6FF00",
+                "accent":"F4FF81"
+            }
+        },
+        "yellow": {
+            "primary": {
+                "color":"FFEB3B",
+                "dark":"FBC02D",
+                "accent":"FFF9C4"
+            },
+            "secondary": {
+                "color":"FFFF00",
+                "dark":"FFEA00",
+                "accent":"FFFF8D"
+            }
+        },
+        "amber": {
+            "primary": {
+                "color":"FFC107",
+                "dark":"FFA000",
+                "accent":"FFECB3"
+            },
+            "secondary": {
+                "color":"FFD740",
+                "dark":"FFC400",
+                "accent":"FFE57F"
+            }
+        },
+        "orange": {
+            "primary": {
+                "color":"FF9800",
+                "dark":"F57C00",
+                "accent":"FFE0B2"
+            },
+            "secondary": {
+                "color":"FFAB40",
+                "dark":"FF9100",
+                "accent":"FFD180"
+            }
+        },
+        "deepOrange": {
+            "primary": {
+                "color":"FF5722",
+                "dark":"E64A19",
+                "accent":"FFCCBC"
+            },
+            "secondary": {
+                "color":"FF6E40",
+                "dark":"FF3D00",
+                "accent":"FF9E80"
+            }
+        },
+        "brown": {
+            "primary": {
+                "color":"795548",
+                "dark":"5D4037",
+                "accent":"D7CCC8"
+            }
+        },
+        "grey": {
+            "primary": {
+                "color":"9E9E9E",
+                "dark":"616161",
+                "accent":"F5F5F5"
+            }
+        },
+        "blueGrey": {
+            "primary": {
+                "color":"607D8B",
+                "dark":"455A64",
+                "accent":"CFD8DC"
+            }
+        }
+    }
+}
