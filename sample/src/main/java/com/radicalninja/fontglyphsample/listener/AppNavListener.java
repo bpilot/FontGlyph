@@ -6,4 +6,6 @@ public interface AppNavListener {
 
     public void loadIconDetails(Glyph glyph, int themeResId);
 
+    public void goBack();
+
 }
